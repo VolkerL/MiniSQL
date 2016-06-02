@@ -1,0 +1,14 @@
+module check
+
+imports
+  signatures/MiniSQL-sig
+  
+  runtime/task/messages
+
+rules
+  nabl-constraint(|ctx):
+    TableDef(name, _) -> <fail>
+    where
+      [<is-lower>|_] := <explode-string> name;
+      <task-create-warning(|ctx, "Table names usually start with a capital.")> name
+    

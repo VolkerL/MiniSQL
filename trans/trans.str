@@ -1,0 +1,20 @@
+module trans
+
+imports
+  signatures/MiniSQL-sig
+
+rules
+  is-coldef = ?ColDef(_, _)
+
+  my-id = id
+  
+rules
+  transformation-one :
+  (node, _, _, path, project-path) -> (filename, 1)
+    with
+      filename := <guarantee-extension(|"aterm")> path
+
+  transformation-id :
+  (node, _, _, path, project-path) -> (filename, node)
+    with
+      filename := <guarantee-extension(|"aterm")> path
