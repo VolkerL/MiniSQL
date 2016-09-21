@@ -8,6 +8,8 @@ rules
 
   my-id = id
   
+  table-T-with-int-col-i = !Module([TableDef("T", [ColDef("i", INT())])])
+  
 rules
   transformation-one :
   (node, _, _, path, project-path) -> (filename, 1)
