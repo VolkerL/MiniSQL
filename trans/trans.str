@@ -20,3 +20,9 @@ rules
   (node, _, _, path, project-path) -> (filename, node)
     with
       filename := <guarantee-extension(|"aterm")> path
+      
+  transformation-newlinestring :
+  (node, _, _, path, project-path) -> (filename, "<newline>
+</newline>")
+    with
+      filename := <guarantee-extension(|"aterm")> path

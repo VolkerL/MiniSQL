@@ -6,7 +6,9 @@ imports
 
 context-free start-symbols
 
-    Start
+    Start 
+    // for testing of SPT
+    ColDef
 
 context-free syntax
 

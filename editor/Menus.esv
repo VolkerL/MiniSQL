@@ -29,6 +29,7 @@ menus
     end
     
   menu: "Transform"
+    action: "Newline String" = transformation-newlinestring
     action: "Print 1 on parse" = transformation-one
     submenu: "SubMenu"
       action: "Print id" = transformation-id
